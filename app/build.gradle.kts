@@ -16,8 +16,15 @@ apply(plugin = "org.jetbrains.kotlin.android")
 android {
     namespace = libs.versions.applicationId.get()
     compileSdk = libs.versions.compileSdk.get().toInt()
+    buildToolsVersion = "29.0.2"
 
     defaultConfig {
+        renderscriptTargetApi = 29
+        renderscriptSupportModeEnabled = true
+        vectorDrawables {
+            useSupportLibrary = true
+        }
+
         applicationId = libs.versions.applicationId.get()
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
@@ -68,6 +75,7 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
 
     // serialization
     implementation(libs.kotlin.serilization.json)
@@ -75,6 +83,7 @@ dependencies {
     // hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
+    implementation(libs.hilt.work)
 
     // room
     implementation(libs.room.runtime)
@@ -100,6 +109,12 @@ dependencies {
     // firebase
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.crashlytics)
+
+    // work manager
+    implementation(libs.work.manager)
+
+    // permissionx
+    implementation(libs.permissionx)
 }
 
 // region mini ci-cd helper methods

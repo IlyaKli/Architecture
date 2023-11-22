@@ -19,6 +19,7 @@ appcompat = "1.6.1"
 material = "1.8.0"
 constraintlayout = "2.1.4"
 navigation = "2.5.3"
+lifecycle-livedata-ktx = "2.6.2"
 # test
 junit = "4.13.2"
 androidx-test-espresso = "3.5.1"
@@ -34,6 +35,7 @@ coroutines = "1.6.4"
 ksp = "1.8.10-1.0.9"
 # hilt
 hilt = "2.44"
+hilt-work = "1.0.0"
 javax-inject = "1"
 # room
 room = "2.5.1"
@@ -56,6 +58,10 @@ chucker = "3.5.2"
 seismic = "1.0.3"
 # firebase
 firebase-bom = "32.3.1"
+# work-manager
+work-manager = "2.8.1"
+# permissionx
+permissionx = "1.7.1"
 
 [plugins]
 # android
@@ -76,6 +82,7 @@ safe-args = { id = "androidx.navigation.safeargs", version.ref = "navigation" }
 # android sdk
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle-livedata-ktx" }
 androidx-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation" }
@@ -93,6 +100,7 @@ coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutin
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
 hilt-javax-inject = { module = "javax.inject:javax.inject", version.ref = "javax-inject" }
+hilt-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "hilt-work" }
 # room
 room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
@@ -118,3 +126,7 @@ seismic = { group = "com.squareup", name = "seismic", version.ref = "seismic" }
 # firebase
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase-bom" }
 firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics-ktx" }
+# work-manager
+work-manager = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "work-manager" }
+# permissionx
+permissionx = { group = "com.guolindev.permissionx", name = "permissionx", version.ref = "permissionx" }
