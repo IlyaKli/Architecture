@@ -1,0 +1,102 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/violet_90</item>
+        <item name="colorOnPrimary">@color/violet_5</item>
+        <item name="colorPrimaryContainer">@color/violet_25</item>
+        <item name="colorOnPrimaryContainer">@color/violet_100</item>
+        <item name="colorSecondary">@color/cherry_90</item>
+        <item name="colorOnSecondary">@color/cherry_5</item>
+        <item name="colorSecondaryContainer">@color/cherry_25</item>
+        <item name="colorOnSecondaryContainer">@color/cherry_100</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/white_100</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.App.BottomSheetDialog</item>
+        <item name="android:dialogTheme">@style/AlertDialog</item>
+    </style>
+
+    <!--    region checkbox-->
+    <style name="SquareCheckBox">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/checkbox_square_selector</item>
+    </style>
+
+    <style name="CircleCheckBox">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/checkbox_circle_selector</item>
+    </style>
+    <!--    endregion-->
+
+    <!--    region TextInputLayout-->
+    <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/box_stroke_color_selector</item>
+        <item name="boxStrokeErrorColor">@color/error_100</item>
+        <item name="android:textColorHint">@color/black_solid_50</item>
+        <item name="hintTextColor">@color/violet_100</item>
+        <item name="hintTextAppearance">@style/Text.System.Placeholder</item>
+        <item name="errorTextColor">@color/error_100</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.None</item>
+    </style>
+    <!--    endregion-->
+
+    <!--    region back button-->
+    <style name="CloseNavigateCross">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:src">@drawable/ic_cross</item>
+    </style>
+
+    <style name="BackNavigateArrow">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:src">@drawable/ic_arrow_left</item>
+    </style>
+    <!--    region-->
+
+    <!--    region bottom sheet-->
+    <style name="ThemeOverlay.App.BottomSheetDialog" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/ModalBottomSheetDialog</item>
+    </style>
+
+    <style name="ModalBottomSheetDialog" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="backgroundTint">@color/white_100</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.App.LargeComponent</item>
+        <item name="android:windowBackground">@drawable/dialog_rounded_background</item>
+    </style>
+    <!--    region-->
+
+    <!--    region alert dialog-->
+    <style name="AlertDialog" parent="ThemeOverlay.Material3.Dialog.Alert">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@drawable/background_alert_dialog</item>
+    </style>
+    <!--    endregion-->
+
+    <!--    region shape-->
+    <style name="ShapeAppearance.App.LargeComponent" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">24dp</item>
+    </style>
+    <!--    endregion-->
+
+    <!--    region switch-->
+    <style name="SwitchMaterial" parent="Widget.Material3.CompoundButton.Switch">
+        <item name="android:thumb">@drawable/switch_thumb</item>
+        <item name="track">@drawable/switch_track</item>
+        <item name="thumbTint">@null</item>
+        <item name="trackTint">@null</item>
+        <item name="useMaterialThemeColors">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!--    endregion-->
+
+</resources>

@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Plan</string>
+
+    <!--   region links -->
+    <string name="link_policy" translatable="false">https://www.google.com</string>
+    <!--   endregion-->
+
+    <!--   region General Error Text-->
+    <string name="general_error_text_unknown">Unknown Error</string>
+    <string name="general_error_text_no_internet">You have no internet</string>
+    <!--   endregion-->
+
+    <!--   region no internet fragment-->
+    <string name="no_internet_headline">Нет интернета</string>
+    <string name="no_internet_instruction">Проверьте подключение к сети и попробуйте снова</string>
+    <string name="no_internet_button">Повторить</string>
+    <!--   endregion-->
+
+    <!--   region bottom nav-->
+    <string name="bottom_nav_profile">Профиль</string>
+    <string name="bottom_nav_catalog">Каталог</string>
+    <!--   endregion-->
+
+    <!--   region Authorization Phone Number-->
+    <string name="authorization_phone_headline">Вход</string>
+    <string name="authorization_phone_instruction">Введите номер вашего телефона. Отправим на него SMS-код с подтверждением</string>
+    <string name="authorization_phone_hint_phone_number">Номер телефона</string>
+    <string name="authorization_phone_incorrect_number">Некорректный формат телефона</string>
+    <string name="authorization_phone_policy">Соглашаюсь с Правилами и Политикой компании</string>
+    <string name="authorization_phone_company_rules">Правилами</string>
+    <string name="authorization_phone_logout">Log out</string>
+    <string name="authorization_phone_login">Войти</string>
+    <!--   endregion-->
+
+</resources>

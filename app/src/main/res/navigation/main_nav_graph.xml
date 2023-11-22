@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/profile_tab_fragment">
+
+    <!--region Global Navigation -->
+    <action
+        android:id="@+id/action_global_noInternetFragment"
+        app:destination="@id/no_internet_fragment" />
+    <!--endregion-->
+
+    <!--region Bottom Navigation -->
+    <fragment
+        android:id="@+id/profile_tab_fragment"
+        android:name="com.yusmp.plan.presentation.profileTab.profile.ProfileTabFragment"
+        android:label="profile_tab_fragment"
+        tools:layout="@layout/fragment_profile_tab">
+        <action
+            android:id="@+id/action_profileFragment_to_authorization_nav_graph"
+            app:destination="@id/authorization_nav_graph" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/catalog_tab_fragment"
+        android:name="com.yusmp.plan.presentation.catalogTab.catalog.CatalogTabFragment"
+        android:label="catalog_tab_fragment"
+        tools:layout="@layout/fragment_catalog_tab" />
+    <!--endregion-->
+
+    <!-- region Nested nav graphs   -->
+    <navigation
+        android:id="@+id/authorization_nav_graph"
+        app:startDestination="@id/authorizationFragment">
+
+        <argument
+            android:name="isFirstLaunch"
+            android:defaultValue="false"
+            app:argType="boolean" />
+
+        <fragment
+            android:id="@+id/authorizationFragment"
+            android:name="com.yusmp.plan.presentation.auth.phone.PhoneAuthFragment"
+            android:label="fragment_authorization"
+            tools:layout="@layout/fragment_phone_auth" />
+
+    </navigation>
+    <!-- endregion   -->
+
+    <fragment
+        android:id="@+id/no_internet_fragment"
+        android:name="com.yusmp.plan.presentation.noInternet.NoInternetFragment"
+        android:label="fragment_no_internet"
+        tools:layout="@layout/fragment_no_internet" />
+
+</navigation>
