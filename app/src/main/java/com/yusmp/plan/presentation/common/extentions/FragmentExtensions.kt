@@ -13,6 +13,9 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.google.android.material.snackbar.Snackbar
+import com.permissionx.guolindev.PermissionX
+import com.permissionx.guolindev.callback.ForwardToSettingsCallback
+import com.permissionx.guolindev.callback.RequestCallback
 import com.yusmp.plan.presentation.MainActivity
 import com.yusmp.plan.presentation.common.utils.AppSnackBarUtils
 import kotlinx.coroutines.flow.Flow
@@ -94,4 +97,37 @@ fun Fragment.setHomeAsStartDestination() {
 
 fun Fragment.setStatusBarColor(@ColorRes colorId: Int) {
     requireActivity().window.statusBarColor = getColor(colorId)
+}
+
+/**
+ *
+ * Requests permissions from the user for a given fragment
+ * @param onResult a lambda function
+ * that is invoked with a boolean value indicating whether all permissions are granted or not
+ * @param permissions a list of strings representing the permissions to request
+ * @param dialogStringsId an optional list of integers representing the resource IDs of the strings
+ * to use in the dialog that shows when the user needs to go to the settings to grant permissions.
+ * The list should have the following structure:
+ * [0]: the message to explain why these permissions are necessary
+ * [1]: the positive button text
+ * [2]: the negative button text */
+fun Fragment.requestPermission(
+    onResult: (isAllGranted: Boolean) -> Unit,
+    permissions: List<String>,
+    dialogStringsId: List<Int>? = null,
+) {
+    PermissionX.init(this)
+        .permissions(permissions)
+        .onForwardToSettings(ForwardToSettingsCallback { scope, deniedList ->
+            if (dialogStringsId == null) return@ForwardToSettingsCallback
+            scope.showForwardToSettingsDialog(
+                deniedList,
+                getString(dialogStringsId[0]),
+                getString(dialogStringsId[1]),
+                getString(dialogStringsId[2])
+            )
+        })
+        .request(RequestCallback { allGranted, _, _ ->
+            onResult.invoke(allGranted)
+        })
 }

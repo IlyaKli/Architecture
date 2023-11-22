@@ -11,7 +11,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.squareup.seismic.ShakeDetector
 import com.yusmp.plan.R
 import com.yusmp.plan.databinding.ActivityMainBinding
-import com.yusmp.plan.presentation.auth.phone.PhoneAuthFragment
+import com.yusmp.plan.presentation.auth.blure.BlurFragment
 import com.yusmp.plan.presentation.common.extentions.observeFlow
 import com.yusmp.plan.presentation.common.models.AppEvent
 import com.yusmp.plan.presentation.common.utils.AppSnackBarUtils.showSnackBar
@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
         val graph = navController.navInflater.inflate(R.navigation.main_nav_graph).apply {
             setStartDestination(R.id.authorization_nav_graph)
         }
-        navController.setGraph(graph, PhoneAuthFragment.createArgBundle(isFirstLaunch = true))
+        navController.setGraph(graph, BlurFragment.createArgBundle(isFirstLaunch = true))
     }
 
     fun setHomeAsStartDestination() {

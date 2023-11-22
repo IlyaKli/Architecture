@@ -1,4 +1,4 @@
-package com.yusmp.plan.presentation.auth.phone.model
+package com.yusmp.plan.presentation.auth.blure.model
 
 enum class CountryPhoneCode(val internationalCode: String, private val internalCode: String = "") {
     RUSSIAN("+7", "8"),
