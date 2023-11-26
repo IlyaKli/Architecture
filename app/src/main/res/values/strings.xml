@@ -48,4 +48,6 @@
         WorkManager Demo -> App Permissions and grant access to Storage.</string>
     <!--   endregion -->
 
+    <string name="permission_instruction_alarm">Чтобы запустить службу, нам необходимо следующее разрешение:</string>
+
 </resources>

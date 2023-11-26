@@ -24,7 +24,7 @@
 
     <fragment
         android:id="@+id/catalog_tab_fragment"
-        android:name="com.yusmp.plan.presentation.catalogTab.catalog.CatalogTabFragment"
+        android:name="com.yusmp.plan.presentation.catalogTab.catalog.AlarmFragment"
         android:label="catalog_tab_fragment"
         tools:layout="@layout/fragment_catalog_tab" />
     <!--endregion-->
