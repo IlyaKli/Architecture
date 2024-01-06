@@ -32,4 +32,22 @@
     <string name="authorization_phone_login">Войти</string>
     <!--   endregion-->
 
+    <!-- region Blur -->
+    <string name="blur_title">Select Blur Amount</string>
+    <string name="select_image">Select Image</string>
+    <string name="go">Go</string>
+    <string name="see_file">See File</string>
+    <string name="blur_lv_1">A little blurred</string>
+    <string name="blur_lv_2">More blurred</string>
+    <string name="blur_lv_3">The most blurred</string>
+    <string name="cancel_work">Cancel Work</string>
+    <string name="permission_instruction">Чтобы уведомлять вас о статусе обработки фото, нам необходимо следующее разрешение:</string>
+    <string name="permission_instruction_agreement">Хорошо</string>
+    <string name="permission_instruction_cancel">Отмена</string>
+    <string name="set_permissions_in_settings">Go to Settings -> Apps and Notifications ->
+        WorkManager Demo -> App Permissions and grant access to Storage.</string>
+    <!--   endregion -->
+
+    <string name="permission_instruction_alarm">Чтобы запустить службу, нам необходимо следующее разрешение:</string>
+
 </resources>
