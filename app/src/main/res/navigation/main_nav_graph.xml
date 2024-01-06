@@ -20,14 +20,11 @@
         <action
             android:id="@+id/action_profileFragment_to_authorization_nav_graph"
             app:destination="@id/authorization_nav_graph" />
-        <action
-            android:id="@+id/action_profile_tab_fragment_to_ticTacToeFragment"
-            app:destination="@id/ticTacToeFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/catalog_tab_fragment"
-        android:name="com.yusmp.plan.presentation.catalogTab.catalog.AlarmFragment"
+        android:name="com.yusmp.plan.presentation.catalogTab.catalog.CatalogTabFragment"
         android:label="catalog_tab_fragment"
         tools:layout="@layout/fragment_catalog_tab" />
     <!--endregion-->
@@ -44,7 +41,7 @@
 
         <fragment
             android:id="@+id/authorizationFragment"
-            android:name="com.yusmp.plan.presentation.auth.blure.BlurFragment"
+            android:name="com.yusmp.plan.presentation.auth.phone.PhoneAuthFragment"
             android:label="fragment_authorization"
             tools:layout="@layout/fragment_phone_auth" />
 
@@ -56,9 +53,5 @@
         android:name="com.yusmp.plan.presentation.noInternet.NoInternetFragment"
         android:label="fragment_no_internet"
         tools:layout="@layout/fragment_no_internet" />
-    <fragment
-        android:id="@+id/ticTacToeFragment"
-        android:name="com.yusmp.plan.presentation.ticTacToe.TicTacToeFragment"
-        android:label="TicTacToeFragment" />
 
 </navigation>

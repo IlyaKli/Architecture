@@ -13,9 +13,6 @@
         <item name="android:statusBarColor">@color/white_100</item>
         <item name="bottomSheetDialogTheme">@style/ThemeOverlay.App.BottomSheetDialog</item>
         <item name="android:dialogTheme">@style/AlertDialog</item>
-
-        <!--        Можно определить глобальный стиль вью здесь, используется название атрибута стиля из "attrs"-->
-        <!--        <item name="TicTacToeFieldStyle">@style/TicTacToeFieldAppStyle</item>-->
     </style>
 
     <!--    region checkbox-->
@@ -101,19 +98,5 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
     <!--    endregion-->
-
-    <!--    Стиль по умолчанию, на случай, если основные параметры не будут указаны-->
-    <style name="TicTacToeFieldDefaultStyle">
-        <item name="crossColor">@android:color/black</item>
-        <item name="zeroColor">@android:color/holo_red_dark</item>
-        <item name="gridColor">@android:color/holo_green_light</item>
-    </style>
-
-    <!--    Стандартный стиль, если вью часто используется в приложении - обычное применение стиля-->
-    <style name="TicTacToeFieldAppStyle" parent="TicTacToeFieldDefaultStyle">
-        <item name="crossColor">@android:color/holo_blue_light</item>
-        <item name="zeroColor">@android:color/holo_red_light</item>
-        <item name="gridColor">@android:color/darker_gray</item>
-    </style>
 
 </resources>
