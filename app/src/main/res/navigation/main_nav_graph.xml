@@ -20,6 +20,9 @@
         <action
             android:id="@+id/action_profileFragment_to_authorization_nav_graph"
             app:destination="@id/authorization_nav_graph" />
+        <action
+            android:id="@+id/action_profile_tab_fragment_to_ticTacToeFragment"
+            app:destination="@id/ticTacToeFragment" />
     </fragment>
 
     <fragment
@@ -53,5 +56,9 @@
         android:name="com.yusmp.plan.presentation.noInternet.NoInternetFragment"
         android:label="fragment_no_internet"
         tools:layout="@layout/fragment_no_internet" />
+    <fragment
+        android:id="@+id/ticTacToeFragment"
+        android:name="com.yusmp.plan.presentation.ticTacToe.TicTacToeFragment"
+        android:label="TicTacToeFragment" />
 
 </navigation>
