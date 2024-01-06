@@ -1,4 +1,4 @@
-# Base Project
+# Architecture
 
 This project contains some common features and utilities that can help develop app faster and easier. Here are some of
 the things it handles by default:

@@ -41,7 +41,7 @@
 
         <fragment
             android:id="@+id/authorizationFragment"
-            android:name="com.yusmp.plan.presentation.auth.blure.BlurFragment"
+            android:name="com.yusmp.plan.presentation.auth.phone.PhoneAuthFragment"
             android:label="fragment_authorization"
             tools:layout="@layout/fragment_phone_auth" />
 
