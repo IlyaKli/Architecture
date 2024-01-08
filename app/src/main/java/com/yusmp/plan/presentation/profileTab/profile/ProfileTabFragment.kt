@@ -56,5 +56,8 @@ class ProfileTabFragment : BaseFragment<FragmentProfileTabBinding, ProfileUiStat
         btnTicTacCv.setOnClickListener {
             findNavController().navigate(ProfileTabFragmentDirections.actionProfileTabFragmentToTicTacToeFragment())
         }
+        btnGantCv.setOnClickListener {
+            findNavController().navigate(ProfileTabFragmentDirections.actionProfileTabFragmentToGantFragment())
+        }
     }
 }
