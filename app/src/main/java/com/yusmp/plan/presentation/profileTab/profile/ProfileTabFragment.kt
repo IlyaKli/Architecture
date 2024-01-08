@@ -53,5 +53,11 @@ class ProfileTabFragment : BaseFragment<FragmentProfileTabBinding, ProfileUiStat
         btnLogin.setOnClickListener {
             viewModel.changeAuthorizationState()
         }
+        btnTicTacCv.setOnClickListener {
+            findNavController().navigate(ProfileTabFragmentDirections.actionProfileTabFragmentToTicTacToeFragment())
+        }
+        btnGantCv.setOnClickListener {
+            findNavController().navigate(ProfileTabFragmentDirections.actionProfileTabFragmentToGantFragment())
+        }
     }
 }
