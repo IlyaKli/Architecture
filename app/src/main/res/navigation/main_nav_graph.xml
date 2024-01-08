@@ -30,7 +30,7 @@
 
     <fragment
         android:id="@+id/catalog_tab_fragment"
-        android:name="com.yusmp.plan.presentation.catalogTab.catalog.AlarmFragment"
+        android:name="com.yusmp.plan.presentation.catalogTab.catalog.CatalogTabFragment"
         android:label="catalog_tab_fragment"
         tools:layout="@layout/fragment_catalog_tab" />
     <!--endregion-->
@@ -47,7 +47,7 @@
 
         <fragment
             android:id="@+id/authorizationFragment"
-            android:name="com.yusmp.plan.presentation.auth.blure.BlurFragment"
+            android:name="com.yusmp.plan.presentation.auth.phone.PhoneAuthFragment"
             android:label="fragment_authorization"
             tools:layout="@layout/fragment_phone_auth" />
 

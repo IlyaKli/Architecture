@@ -1,111 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:layout_marginHorizontal="20dp">
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/iv_back"
+        style="@style/BackNavigateArrow"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toTopOf="@id/tv_headline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tv_headline"
+        style="@style/Text.Headline1.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/authorization_phone_headline"
+        app:layout_constraintBottom_toTopOf="@id/tv_instruction"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_back"
+        app:layout_goneMarginTop="64dp" />
+
+    <TextView
+        android:id="@+id/tv_instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/authorization_phone_instruction"
+        android:textAppearance="@style/Text.Paragraph2"
+        android:textColor="@color/black_solid_50"
+        app:layout_constraintBottom_toTopOf="@id/il_phone_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_headline" />
+
+    <Space
+        android:id="@+id/spacer"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_instruction" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/il_phone_number"
+        style="@style/TextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:orientation="vertical">
+        android:hint="@string/authorization_phone_hint_phone_number"
+        app:layout_constraintBottom_toTopOf="@id/tv_policy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spacer">
 
-        <ImageView
-            android:id="@+id/iv_test"
+        <EditText
+            android:id="@+id/et_phone_number"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:layout_weight="1"
-            android:scaleType="fitCenter"
-            android:src="@drawable/android_cupcake" />
+            android:layout_height="56dp"
+            android:digits="0123456789+-() "
+            android:imeOptions="actionDone"
+            android:inputType="phone"
+            android:maxLength="16"
+            android:paddingHorizontal="18dp"
+            android:textAppearance="@style/Text.System.Placeholder"
+            android:textColor="@color/black_solid_100" />
 
-        <TextView
-            android:id="@+id/tv_filters"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/blur_title"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+    </com.google.android.material.textfield.TextInputLayout>
 
+    <CheckBox
+        android:id="@+id/chk_policy"
+        style="@style/SquareCheckBox"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_policy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_policy" />
 
-        <RadioGroup
-            android:id="@+id/rg_blur_level"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:checkedButton="@+id/radio_blur_lv_1"
-            android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_policy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:autoLink="none"
+        android:text="@string/authorization_phone_policy"
+        android:textAppearance="@style/Text.Paragraph3.Regular"
+        android:textColor="@color/black_solid_100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/chk_policy"
+        app:layout_constraintTop_toBottomOf="@id/il_phone_number" />
 
-            <RadioButton
-                android:id="@+id/radio_blur_lv_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/blur_lv_1" />
+    <Button
+        android:id="@+id/btn_login"
+        style="@style/Button.Big.Filled"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:enabled="false"
+        android:text="@string/authorization_phone_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_policy" />
 
-            <RadioButton
-                android:id="@+id/radio_blur_lv_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/blur_lv_2" />
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <RadioButton
-                android:id="@+id/radio_blur_lv_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/blur_lv_3" />
-        </RadioGroup>
-
-        <RadioGroup
-            android:id="@+id/rg_destinations"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-        </RadioGroup>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/btn_cancel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cancel_work"
-                    android:visibility="gone" />
-
-                <ProgressBar
-                    android:id="@+id/progress_bar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:indeterminate="true"
-                    android:visibility="gone" />
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/btn_go"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/go" />
-
-            <Button
-                android:id="@+id/btn_see_file"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/see_file"
-                android:visibility="gone"
-                tools:visibility="visible" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
