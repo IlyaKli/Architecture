@@ -63,4 +63,9 @@
     <!--    Transparent -->
     <color name="transparent">#00000000</color>
 
+    <!--region Blue-->
+    <color name="blue_700">#5594A4</color>
+    <color name="blue_200">#94DCED</color>
+    <!--endregion-->
+
 </resources>

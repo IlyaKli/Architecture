@@ -44,6 +44,4 @@ fun Int.isDefault(): Boolean = this == -1
 
 fun Float.isDefault(): Boolean = this == -1.0f
 
-fun Float.isZero(): Boolean = this == 0.0f
-
 fun Double.isDefault(): Boolean = this == -1.0
